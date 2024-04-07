@@ -34,6 +34,8 @@ protected:
 	virtual void on_key_down(int key) { }
 	virtual void on_key_up(int key) { }
 	virtual void on_left_button_down(POINT p) { }
+
+	virtual void on_timer(int id) { }
 };
 
 } // namespace

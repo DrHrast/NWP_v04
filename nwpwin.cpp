@@ -80,6 +80,7 @@ LRESULT CALLBACK window::proc(HWND hw, UINT msg, WPARAM wp, LPARAM lp)
 		case WM_KEYDOWN:		pw->on_key_down(wp); return 0;
 		case WM_KEYUP:			pw->on_key_up(wp); return 0;
 		case WM_LBUTTONDOWN:	pw->on_left_button_down(get_point(lp)); return 0;
+		case WM_TIMER:			pw->on_timer(wp); return 0;
 	}
 	return ::DefWindowProc(hw, msg, wp, lp);
 }
